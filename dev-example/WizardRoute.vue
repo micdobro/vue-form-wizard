@@ -3,9 +3,10 @@
     <button @click="tabs.shift()">Remove one at start</button>
     <button @click="tabs.push('testt')">Add at the end</button>
     <button @click="tabs.unshift('new start')">Add one at start</button>
-    <router-link to="/test">Go to a different route</router-link>
+    <router-link to="/test">Go to a different route</router-link>    
     <form-wizard @on-complete="onComplete"
                  @on-change="handleChange"
+                 title="Testing siurek"                 
                  :start-index.sync="activeIndex"
                  color="#e74c3c">
        <tab-content v-for="tab in tabs" :title="tab" :key="tab">{{tab}}</tab-content>

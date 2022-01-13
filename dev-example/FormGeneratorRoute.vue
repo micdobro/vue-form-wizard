@@ -1,7 +1,7 @@
 <template>
   <div>
     <form-wizard @on-complete="onComplete"
-                 color="gray"
+                 color="gray"                 
                  error-color="#a94442">
       <tab-content title="Personal details"
                    icon="ti-user" :before-change="validateFirstTab">
@@ -25,7 +25,7 @@
                    icon="ti-check">
         <h4>Your json is ready!</h4>
       </tab-content>
-    </form-wizard>
+    </form-wizard>    
   </div>
 </template>
 <script>

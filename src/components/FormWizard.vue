@@ -8,6 +8,10 @@
       </slot>
     </div>
     <div class="wizard-navigation">
+      <div class="wizard-tab-content">
+        <slot v-bind="slotProps">
+        </slot>
+      </div>
       <div class="wizard-progress-with-circle" v-if="!isVertical">
         <div class="wizard-progress-bar"
              :style="progressBarStyle"></div>
@@ -28,10 +32,7 @@
           </wizard-step>
         </slot>
       </ul>
-      <div class="wizard-tab-content">
-        <slot v-bind="slotProps">
-        </slot>
-      </div>
+      
     </div>
 
     <div class="wizard-card-footer clearfix" v-if="!hideButtons">
@@ -90,11 +91,11 @@
       },
       title: {
         type: String,
-        default: 'Awesome Wizard'
+        default: ''
       },
       subtitle: {
         type: String,
-        default: 'Split a complicated flow in multiple steps'
+        default: ''
       },
       nextButtonText: {
         type: String,
